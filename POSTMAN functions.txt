@@ -1,0 +1,63 @@
+General Methods
+
+pm.response.to.be.ok(): Checks if the response status code is 200, indicating a successful request.
+pm.response.to.have.status(statusCode): Checks if the response status code matches the specified status code.
+pm.response.to.have.jsonBody(path): Verifies if the response body contains a JSON object at the specified path.
+pm.response.to.have.text(text): Checks if the response body contains the specified text.
+pm.response.to.have.header(headerName, headerValue): Confirms if the response headers contain the specified header name with the corresponding header value.
+pm.response.to.have.cookie(cookieName, cookieValue): Validates if the response cookies contain the specified cookie name with the associated cookie value.
+pm.response.get.json(): Parses the response body as JSON and returns the resulting JSON object.
+pm.response.get.text(): Retrieves the response body as a string.
+pm.response.get.headers(): Returns the response headers as an object.
+pm.response.get.cookies(): Returns the response cookies as an object.
+pm.sendRequest(): Sends the current request.
+pm.set(key, value): Sets a global environment variable.
+pm.get(key): Retrieves a global environment variable.
+Assertion Methods
+
+pm.expect(response): Defines a set of assertions to be evaluated against the response.
+pm.expect(response).to.have.status(statusCode): Asserts that the response status code matches the specified status code.
+pm.expect(response).to.have.jsonBody(path): Confirms that the response body contains a JSON object at the specified path.
+pm.expect(response).to.have.text(text): Verifies that the response body contains the specified text.
+pm.expect(response).to.have.header(headerName, headerValue): Validates that the response headers contain the specified header name with the corresponding header value.
+pm.expect(response).to.have.cookie(cookieName, cookieValue): Asserts that the response cookies contain the specified cookie name with the associated cookie value.
+Test Script Methods
+
+pm.test("description", function(): Defines a test script to execute within the context of the test suite.
+pm.collection.forEach(function(item): Iterates over the collection items and executes the specified function for each item.
+pm.environment.forEach(function(item): Iterates over the environment variables and executes the specified function for each variable.
+pm.variables.set(name, value): Sets a local test script variable.
+pm.variables.get(name): Retrieves a local test script variable.
+This list provides a starting point for exploring the wide range of Postman methods available. You can refer to the Postman documentation for more comprehensive details and usage examples.
+
+===============
+
+Sure, here is a list of common HTTP API response codes with their descriptions:
+
+2xx Success
+
+200 OK: The request was successful and the response body contains the requested information.
+201 Created: The request resulted in the creation of a new resource, and the response body contains a link to the newly created resource.
+202 Accepted: The request has been accepted for processing, but the processing has not yet been completed. The response body may contain some information about the status of the processing.
+204 No Content: The request was successful, but there is no content to return in the response body.
+3xx Redirection
+
+301 Moved Permanently: The requested resource has been permanently moved to a new location, and the response body contains a link to the new location.
+302 Found: The requested resource has been temporarily moved to a new location, and the response body contains a link to the new location.
+303 See Other: The response to the request can be found at another URI, and the response body contains a link to the other URI.
+304 Not Modified: The requested resource has not been modified since the last time it was requested, and the response body is empty.
+4xx Client Error
+
+400 Bad Request: The request could not be understood by the server due to malformed syntax.
+401 Unauthorized: The request requires authentication, but the credentials provided were invalid.
+403 Forbidden: The request was a valid request, but the server is not authorized to fulfill it.
+404 Not Found: The requested resource could not be found.
+405 Method Not Allowed: The request method is not supported for the requested resource.
+5xx Server Error
+
+500 Internal Server Error: An unexpected error has occurred on the server.
+501 Not Implemented: The server does not support the requested method.
+502 Bad Gateway: The server received an invalid response from an upstream server while acting as a proxy or gateway.
+503 Service Unavailable: The server is currently unavailable due to overload or maintenance.
+504 Gateway Timeout: The server did not receive a timely response from an upstream server while acting as a proxy or gateway.
+This is just a brief overview of the most common HTTP API response codes. For more information, you can refer to the HTTP/1.1 specification.

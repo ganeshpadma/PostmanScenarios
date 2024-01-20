@@ -1,0 +1,17 @@
+implicit waits
+C:\Users\ganes\eclipse-workspace
+driver.manage().timeouts().implicitWait(5,TimeUnit.SECONDS);
+driver.manage().timeouts().implicitWait(Duration,ofSeconds(10));
+.card-body button:last-of-type
+userEmail
+userPassword
+
+/html/body/app-root/app-dashboard/app-sidebar/nav/ul/li[4]/button
+login
+naveenkumar.kuchulakanti@cigniti.com
+
+//*[@id="products"]/div[1]/div[2]/div[1]/div/div/button[2]/text()
+
+//div[@class='products']/div[1]/div[2]/div[1]/div/div/button[2]/text()
+
+http://rahulshettyacademy.com/client
